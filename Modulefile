@@ -1,0 +1,10 @@
+name          'mbobakov-eracom_hsm'
+version       '0.1.0'
+source        ''
+author        'mbobakov'
+license       'Apache 2.0'
+summary       'Manage Eracom PL-600 slots and keys'
+description   'Manage Eracom PL-600 slots and keys'
+project_page  ''
+
+dependency 'puppetlabs/stdlib'
