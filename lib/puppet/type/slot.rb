@@ -9,23 +9,12 @@ Puppet::Type.newtype(:slot) do
     end
 
 
-    newparam(:number) do
-        desc "The slot number"
-
-        validate do |value|
-            unless value =~ /^\d+/
-                raise ArgumentError , "%s is not a valid number" % value
-            end
-        end
+    newparam(:admin_pin) do
+        desc "The SO pin for token initialization"
+    end
+    
+    newparam(:user_pin) do
+        desc "The user pin for new token"
     end
 
-    newparam(:path) do
-        desc "Destination path"
-
-        validate do |value|
-            unless value =~ /^\/[a-z0-9]+/
-                raise ArgumentError , "%s is not a valid file path" % value
-            end
-        end
-    end
 end

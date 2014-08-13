@@ -13,9 +13,10 @@ class eracom_hsm (
   $os_users     = 'root',
   $package_src  = $eracom_hsm::params::package_src,
   $so_pin       = $eracom_hsm::params::so_pin,
-  $num_of_slots = $eracom_hsm::params::num_of_slots,
-  $keys         = hiera(eracom_hsm::keys, { 'SAMPLE' => {'name'=>'SAMPLE', 'attributes' =>['A', 'B', 'C'], 'slot' => 1} } ), #TO-DO replace this dirty-hack
+  $admin_pin    = $eracom_hsm::params::admin_pin,
 
+  $slots        = $eracom_hsm::params::slots,
+  $keys         = $eracom_hsm::params::keys,
 ) inherits eracom_hsm::params {
 
   # validate parameters here
